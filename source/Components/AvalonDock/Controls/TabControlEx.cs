@@ -271,9 +271,8 @@ namespace AvalonDock.Controls
 
 		protected override void OnKeyDown(KeyEventArgs e)
 		{
-			// Source: https://weblog.west-wind.com/posts/2021/May/25/WebView2-Home-and-End-Key-Problems-inside-of-WPF-TabControl-Containers
-			if (!IgnoreTabControlKeyBindings)
-				base.OnKeyDown(e);
+			if (!IgnoreTabControlKeyBindings) base.OnKeyDown(e); 
+			// Else: bypass all TabControl key processing
 		}
 	}
 }
